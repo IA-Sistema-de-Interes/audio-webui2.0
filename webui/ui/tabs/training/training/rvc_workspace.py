@@ -401,7 +401,7 @@ def train_model(base_ckpt_, epochs):
     base_ckpt = ckpt_path
 
     def get_save_paths(epoch, base_ckpt):
-        base_ckpt = os.path.join(base_ckpt, 'e_' + str(epoch))
+        base_ckpt = os.path.join(base_ckpt, 'train')
         return [os.path.join(base_ckpt, file_D), os.path.join(base_ckpt, file_G),
                 os.path.join(base_ckpt, current_workspace.name + '.pth'), os.path.join(base_ckpt, 'train.json')]
 
