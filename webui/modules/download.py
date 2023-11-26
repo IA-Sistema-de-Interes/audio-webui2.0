@@ -17,7 +17,7 @@ class AutoModel:
 
 
 def get_rvc_models():
-    path = os.path.join('data', 'models', 'rvc')
+    path = os.path.join('/content/drive/MyDrive/data', 'models', 'rvc')
     output = []
     for f in os.listdir(path):
         f_path = os.path.join(path, f)
