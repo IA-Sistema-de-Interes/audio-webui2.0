@@ -122,7 +122,7 @@ for settings_dict in settings_add:
             config[k] = v
 
 
-config_path = os.path.join('data', 'config.json')
+config_path = os.path.join('/content/drive/MyDrive/data', 'config.json')
 
 
 def get(name):
@@ -227,7 +227,7 @@ def login_hf(token):
 
 
 def delete_model(model):
-    shutil.rmtree(f'data/models/{model}')
+    shutil.rmtree(f'/content/drive/MyDrive/data/models/{model}')
     return mod.refresh_choices()
 
 
