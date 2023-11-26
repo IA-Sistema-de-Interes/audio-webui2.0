@@ -13,7 +13,7 @@ class Workspace:
 
     @property
     def space_path(self):
-        return os.path.join('data', 'training', self.base_path, self.name)
+        return os.path.join('/content/drive/MyDrive/data', 'training', self.base_path, self.name)
 
     @property
     def json_path(self):
