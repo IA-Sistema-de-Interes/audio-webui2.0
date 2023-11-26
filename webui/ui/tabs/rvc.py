@@ -106,7 +106,7 @@ def gen(rvc_model_selected, speaker_id, pitch_extract, audio_in, up_key, index_r
 
         index_file = ''
         try:
-            model_basedir = os.path.join('data', 'models', 'rvc', os.path.dirname(rvc_model_selected))
+            model_basedir = os.path.join('/content/drive/MyDrive/data', 'models', 'rvc', os.path.dirname(rvc_model_selected))
             index_files = [f for f in os.listdir(model_basedir) if f.endswith('.index')]
             if len(index_files) > 0:
                 for f in index_files:
