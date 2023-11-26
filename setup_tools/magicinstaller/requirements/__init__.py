@@ -45,6 +45,7 @@ requirements = [
 
     PyTube(),
 
+    Whisper(),
 
     SimpleRequirementInit('audiocraft', CompareAction.GEQ, '1.0.0'),
 
