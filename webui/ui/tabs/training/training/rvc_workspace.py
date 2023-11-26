@@ -34,7 +34,7 @@ from webui.modules.implementations.rvc.rvc import load_audio
 from webui.modules.implementations.rvc.utils import savee
 from webui.ui.tabs.training.training.workspace import Workspace
 
-workspace_path = os.path.join('data', 'training', 'RVC')
+workspace_path = os.path.join('/content/drive/MyDrive/data', 'training', 'RVC')
 loss_per = 100
 graph_step = 5
 
@@ -338,7 +338,7 @@ def copy_model(model):
     index_filename = f'{current_workspace.name}_added.index'
     index_path_filename = os.path.join(current_workspace.space_path, index_filename)
     model_path = os.path.join(current_workspace.space_path, 'models', model, filename)
-    rvc_model_base_path = os.path.join('data', 'models', 'rvc', current_workspace.name)
+    rvc_model_base_path = os.path.join('/content/drive/MyDrive/data', 'models', 'rvc', current_workspace.name)
     rvc_model_use_path = os.path.join(rvc_model_base_path, filename)
     index_file_out_path = os.path.join(rvc_model_base_path, index_filename)
     if os.path.isdir(rvc_model_use_path):
@@ -385,7 +385,7 @@ def train_model(base_ckpt_, epochs):
     f0 = data['f0'] != 'none'
     ckpt_path = os.path.join(current_workspace.space_path, 'models')
     base_ckpt, is_base = (
-        os.path.join('data', 'training', 'cache', 'RVC', version_sr_models[data['vsr']]['sf']),
+        os.path.join('/content/drive/MyDrive/data', 'training', 'cache', 'RVC', version_sr_models[data['vsr']]['sf']),
         True) if base_ckpt_ == 'f0' \
         else (os.path.join(ckpt_path, base_ckpt_), False)
     fea_dim = 256 if data['v'] == 1 else 768
@@ -928,7 +928,7 @@ def cancel_train():
 
 def download_base_models(version_sr):
     repo = 'lj1995/VoiceConversionWebUI'
-    dl_path = os.path.join('data', 'training', 'cache', 'RVC')
+    dl_path = os.path.join('/content/drive/MyDrive/data', 'training', 'cache', 'RVC')
     for file in version_sr_models[version_sr]['files']:
         sf = version_sr_models[version_sr]['sf']
         if not os.path.isfile(os.path.join(dl_path, sf, file)):
