@@ -27,7 +27,7 @@ from webui.modules.implementations.rvc.infer_pack.models import (
 )
 
 hubert_model = None
-weight_root = os.path.join('data', 'models', 'rvc')
+weight_root = os.path.join('/content/drive/MyDrive/data', 'models', 'rvc')
 
 
 def config_file_change_fp32():
