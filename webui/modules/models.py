@@ -16,7 +16,7 @@ def refresh_choices():
 
 
 def get_installed_models(model_type):
-    _dir = f'data/models/{model_type}'
+    _dir = f'/content/drive/MyDrive/data/models/{model_type}'
     if not os.path.isdir(_dir):
         os.mkdir(_dir)
     found = []
@@ -33,7 +33,7 @@ class ModelLoader:
         self.pipeline: Pipeline = None
 
     def load_model(self, name):
-        _dir = f'data/models/{self.type}/{name}'
+        _dir = f'/content/drive/MyDrive/data/models/{self.type}/{name}'
         self.pipeline = self._load_internal(_dir)
 
     def _load_internal(self, path):
