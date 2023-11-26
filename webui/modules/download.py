@@ -48,7 +48,7 @@ def get_file_name(repo_id: str):
 def hub_download(repo_id: str, model_type: str):
     try:
         huggingface_hub.snapshot_download(repo_id, local_dir_use_symlinks=False,
-                                          local_dir=f'data/models/{model_type}/{get_file_name(repo_id)}')
+                                          local_dir=f'/content/drive/MyDrive/data/models/{model_type}/{get_file_name(repo_id)}')
     except Exception as e:
         return [f'<p style="color: red;">{str(e)}</p>', gradio.Dropdown.update()]
     return [f"Successfully downloaded <a target='_blank' href='https://www.huggingface.co/{repo_id}'>{repo_id}</a>", mod.refresh_choices()]
